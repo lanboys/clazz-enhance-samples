@@ -1,4 +1,6 @@
-package com.bing.lan;
+package com.bing.lan.main;
+
+import com.bing.lan.obj.PersonService;
 
 import java.lang.reflect.Method;
 
@@ -15,7 +17,7 @@ public class UpdateClazz {
 
   public static void main(String[] args) throws Exception {
     ClassPool pool = ClassPool.getDefault();
-    CtClass cc = pool.get("com.bing.lan.PersonService");
+    CtClass cc = pool.get("com.bing.lan.obj.PersonService");
 
     CtMethod personFly = cc.getDeclaredMethod("personFly");
     personFly.insertBefore("System.out.println(\"起飞之前准备降落伞\");");
@@ -31,6 +33,8 @@ public class UpdateClazz {
     // 调用 personFly 方法
     Method personFlyMethod = person.getClass().getMethod("personFly");
     personFlyMethod.invoke(person);
+
+    System.out.println("----------------");
     //调用 joinFriend 方法
     Method execute = person.getClass().getMethod("joinFriend");
     execute.invoke(person);

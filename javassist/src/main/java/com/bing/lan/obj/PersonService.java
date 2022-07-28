@@ -1,4 +1,4 @@
-package com.bing.lan;
+package com.bing.lan.obj;
 
 /**
  * Created by lanbing at 2022/7/28 9:57

@@ -1,4 +1,4 @@
-package com.bing.lan;
+package com.bing.lan.main;
 
 import java.lang.reflect.Method;
 
@@ -33,7 +33,7 @@ public class GenerateClazz {
     ClassPool pool = ClassPool.getDefault();
 
     // 创建类 路径和名称
-    CtClass ctClass = pool.makeClass("gen.com.bing.lan.HelloWorld");
+    CtClass ctClass = pool.makeClass("gen.com.bing.lan.obj.HelloWorld");
 
     // 添加方法
     CtMethod mainMethod = new CtMethod(CtClass.voidType, "main",

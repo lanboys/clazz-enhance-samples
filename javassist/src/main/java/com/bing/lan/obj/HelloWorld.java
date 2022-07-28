@@ -1,4 +1,4 @@
-package com.bing.lan;
+package com.bing.lan.obj;
 
 /**
  * 要生成的类
